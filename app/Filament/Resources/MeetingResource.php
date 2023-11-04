@@ -31,15 +31,15 @@ class MeetingResource extends Resource
                     ->schema([
                         Hidden::make('user_id')
                             ->dehydrateStateUsing(fn ($state) => Auth::id()),
-                        Forms\Components\DateTimePicker::make('date_time')
-                            ->required(),
+                        TextInput::make('topic')
+                            ->required()
+                            ->maxLength(255),
                         TextInput::make('fellowship')
                             ->required()
                             ->maxLength(255),
+                        Forms\Components\DateTimePicker::make('date_time')
+                            ->required(),
                         TextInput::make('location')
-                            ->required()
-                            ->maxLength(255),
-                        TextInput::make('topic')
                             ->required()
                             ->maxLength(255),
                     ])
@@ -61,22 +61,13 @@ class MeetingResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('location')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('topic')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\ViewAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -97,6 +88,7 @@ class MeetingResource extends Resource
         return [
             'index' => Pages\ListMeetings::route('/'),
             'create' => Pages\CreateMeeting::route('/create'),
+            'view' => Pages\ViewMeeting::route('/{record}'),
             'edit' => Pages\EditMeeting::route('/{record}/edit'),
         ];
     }
