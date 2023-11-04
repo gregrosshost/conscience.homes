@@ -35,8 +35,7 @@ class UserResource extends Resource
                     ->maxLength(255),
                 TextInput::make('password')
                     ->password()
-                    ->required()
-                    ->maxLength(255),
+                    ->visibleOn('create'),
                 Select::make('roles')
                     ->multiple()
                     ->relationship('roles', 'name')->preload()
