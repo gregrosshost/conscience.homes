@@ -9,6 +9,11 @@ class Report extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'user_id',
+        'report'
+    ];
+
     protected $casts = [
         'report' => 'json'
     ];
