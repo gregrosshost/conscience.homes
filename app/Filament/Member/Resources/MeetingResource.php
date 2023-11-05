@@ -22,7 +22,7 @@ class MeetingResource extends Resource
 {
     protected static ?string $model = Meeting::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-user-group';
 
     public static function form(Form $form): Form
     {
@@ -52,10 +52,6 @@ class MeetingResource extends Resource
         return $table
             ->modifyQueryUsing(fn (Builder $query) => $query->where('user_id', Auth::id()))
             ->columns([
-                TextColumn::make('user.name')
-                    ->numeric()
-                    ->sortable()
-                    ->label('Member'),
                 TextColumn::make('date_time')
                     ->dateTime()
                     ->sortable(),
