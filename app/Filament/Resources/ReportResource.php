@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Filament\Member\Resources;
+namespace App\Filament\Resources;
 
 use App\Filament\Member\Resources\ReportResource\Pages;
 use App\Filament\Member\Resources\ReportResource\RelationManagers;
 use App\Models\Report;
-use Filament\Forms;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Hidden;
 use Filament\Forms\Components\Section;
@@ -19,7 +18,6 @@ use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Facades\Auth;
 
 class ReportResource extends Resource
@@ -165,12 +163,13 @@ class ReportResource extends Resource
         ];
     }
 
-    public static function getPages(): array
-    {
-        return [
-            'index' => Pages\ListReports::route('/'),
-            'create' => Pages\CreateReport::route('/create'),
-            'edit' => Pages\EditReport::route('/{record}/edit'),
-        ];
-    }
+//    public static function getPages(): array
+//    {
+//        return [
+//            'index' => Pages\ListReports::route('/'),
+//            'view' => Pages\ViewReport::route('/{record}'),
+//            'create' => Pages\CreateReport::route('/create'),
+//            'edit' => Pages\EditReport::route('/{record}/edit'),
+//        ];
+//    }
 }
