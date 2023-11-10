@@ -9,21 +9,23 @@
 
     <title>{{ config('app.name') }}</title>
 
-    <style>
-        [x-cloak] {
-            display: none !important;
-        }
-    </style>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 
     @filamentStyles
     @vite('resources/css/app.css')
 </head>
 
 <body class="antialiased">
-<div class="bg-white lg:pb-12">
+<div class="min-h-screen bg-gray-100 container mx-auto">
     <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
         <header class="flex items-center justify-between py-4 md:py-8">
-            <!-- logo - start -->
+
             <a href="/" class="inline-flex items-center gap-2.5 text-2xl font-bold text-black md:text-3xl" aria-label="logo">
                 <svg xmlns="http://www.w3.org/2000/svg" width="67" height="78" viewBox="0 0 67 78" fill="none">
                     <rect x="0.744141" width="66.2617" height="77.667" rx="9.88156" fill="white"/>
@@ -37,20 +39,6 @@
 
                 Conscience Homes
             </a>
-
-            <nav class="hidden gap-12 lg:flex">
-                <a href="#" class="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700">Home</a>
-                <a href="#" class="inline-flex items-center gap-1 text-lg font-semibold text-indigo-500">
-                    Features
-
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-800" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                    </svg>
-                </a>
-                <a href="#" class="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700">Pricing</a>
-                <a href="#" class="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700">About</a>
-            </nav>
-
 
             @guest
             <div class="-ml-8 flex-col gap-2.5 sm:flex-row sm:justify-center lg:flex lg:justify-start">

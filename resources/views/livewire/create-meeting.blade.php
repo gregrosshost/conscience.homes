@@ -1,5 +1,5 @@
 <div>
-    <form wire:submit="create" class="mx-auto max-w-lg rounded-lg border">
+    <form wire:submit="create" class="mx-auto max-w-lg rounded-lg border bg-gray-50 shadow-2xl">
         <div class="flex flex-col gap-4 p-4 md:p-8">
             <h2 class="mb-4 text-2xl font-bold text-gray-800 md:mb-8 lg:text-3xl">
                 {{ Auth::user()->name }}
