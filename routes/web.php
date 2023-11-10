@@ -18,4 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('add-meeting', \App\Livewire\CreateMeeting::class)->middleware('auth');
+//Route::get('add-meeting', view('meetings.add-meeting'))->middleware('auth');
+Route::view('add-meeting', 'meetings.add-meeting')->middleware('auth');

@@ -6,6 +6,8 @@ use App\Models\Meeting;
 use Filament\Forms;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\Hidden;
+use Filament\Forms\Components\Radio;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
@@ -31,17 +33,25 @@ class CreateMeeting extends Component implements HasForms
             ->schema([
                 Hidden::make('user_id')
                     ->dehydrateStateUsing(fn ($state) => Auth::id()),
-                TextInput::make('topic')
-                    ->required()
-                    ->maxLength(255),
-                TextInput::make('fellowship')
-                    ->required()
-                    ->maxLength(255),
+                Radio::make('fellowship')
+                    ->options([
+                        'NA' => 'NA',
+                        'AA' => 'AA',
+                        'RR' => 'RR'
+                    ])
+                    ->inline()
+                    ->required(),
                 DateTimePicker::make('date_time')
                     ->required(),
                 TextInput::make('location')
                     ->required()
                     ->maxLength(255),
+                TextInput::make('topic')
+                    ->required()
+                    ->maxLength(255),
+
+
+
             ])
             ->statePath('data')
             ->model(Meeting::class);
