@@ -49,9 +49,6 @@ class CreateMeeting extends Component implements HasForms
                 TextInput::make('topic')
                     ->required()
                     ->maxLength(255),
-
-
-
             ])
             ->statePath('data')
             ->model(Meeting::class);
@@ -64,6 +61,8 @@ class CreateMeeting extends Component implements HasForms
         $record = Meeting::create($data);
 
         $this->form->model($record)->saveRelationships();
+
+        redirect()->route('/');
     }
 
     public function render(): View
