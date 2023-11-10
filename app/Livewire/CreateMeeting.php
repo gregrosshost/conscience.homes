@@ -62,7 +62,7 @@ class CreateMeeting extends Component implements HasForms
 
         $this->form->model($record)->saveRelationships();
 
-        redirect()->route('/');
+        redirect('/');
     }
 
     public function render(): View
