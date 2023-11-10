@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\AddMeeting;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Route::get('add-meeting', view('meetings.add-meeting'))->middleware('auth');
+Route::view('add-meeting', 'meetings.add-meeting')->middleware('auth');
