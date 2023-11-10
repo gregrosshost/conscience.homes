@@ -11,10 +11,10 @@ class Application extends Model
 
     protected $fillable = [
         'user_id',
-        'report'
+        'application'
     ];
 
     protected $casts = [
-        'report' => 'json'
+        'application' => 'json'
     ];
 }
