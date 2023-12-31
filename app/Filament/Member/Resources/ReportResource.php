@@ -42,15 +42,8 @@ class ReportResource extends Resource
                                         ->dehydrateStateUsing(fn ($state) => Auth::id()),
                                     DatePicker::make('report.date')
                                         ->required(),
-                                    Select::make('report.prescriptions')
-                                        ->label("Have all your prescriptions been filled for the week ahead?")
-                                        ->options([
-                                            'no' => 'No',
-                                            'yes' => 'Yes'
-                                        ])
-                                        ->required(),
                                     DatePicker::make('report.prescriptions-date')
-                                        ->label("If not, when do they need filled by?"),
+                                        ->label("When is the next date your prescriptions need refilled?"),
                                     Select::make('report.outpatient')
                                         ->label("Did you attend outpatient this week? ")
                                         ->options([
@@ -87,15 +80,29 @@ class ReportResource extends Resource
                                         ])
                                         ->required(),
                                     Select::make('report.meetings-mentor')
-                                        ->label("Do you have a mentor or sponsor?")
+                                        ->label("Do you have a sponsor or mentor?")
                                         ->options([
                                             'no' => 'No',
                                             'yes' => 'Yes'
                                         ])
                                         ->required(),
+                                     Select::make('report.meetings-mentor-contact')
+                                        ->label("How many days this previous week did you contact your mentor?")
+                                         ->helperText("Approximately how many, if you dont know for sure?"),
+                                        ->options([
+                                            '00' => 'None',
+                                            '01' => '1',
+                                            '02' => '2',
+                                            '03' => '3',
+                                            '04' => '4',
+                                            '05' => '5',
+                                            '06' => '6',
+                                            '07' => 'Every'
+                                        ])
+                                        ->required(),
                                     TextInput::make('report.meetings-mentor-update')
                                         ->label("What does your mentor/sponsor have you doing?")
-                                        ->helperText("For Example: Reading NA Chapter 5: What Can I Do?"),
+                                        ->helperText("For Example: Step 1 -> Powerlessness),
                                 ]),
                             Wizard\Step::make('Personal Recovery')
                                 ->icon('heroicon-m-finger-print')
