@@ -88,7 +88,7 @@ class ReportResource extends Resource
                                         ->required(),
                                      Select::make('report.meetings-mentor-contact')
                                         ->label("How many days this previous week did you contact your mentor?")
-                                         ->helperText("Approximately how many, if you dont know for sure?"),
+                                         ->helperText("Approximately how many, if you dont know for sure?")
                                         ->options([
                                             '00' => 'None',
                                             '01' => '1',
