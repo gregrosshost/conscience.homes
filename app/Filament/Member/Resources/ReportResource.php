@@ -108,7 +108,7 @@ class ReportResource extends Resource
                                 ->icon('heroicon-m-finger-print')
                                 ->schema([
                                     Select::make('report.personal')
-                                        ->label("How is your recovery journey coming along from your point of view?")
+                                        ->label("How is your recovery journey coming along your point of view?")
                                         ->helperText("Please note that this is a general scale and may not cover all specific aspects of someone's recovery journey. Recovery is a highly individualized process, and progress can vary from person to person.")
                                         ->options([
                                             '01' => 'Significant Struggles',
