@@ -102,7 +102,7 @@ class ReportResource extends Resource
                                         ->required(),
                                     TextInput::make('report.meetings-mentor-update')
                                         ->label("What does your mentor/sponsor have you doing?")
-                                        ->helperText("For Example: Step 1 -> Powerlessness),
+                                        ->helperText("For Example: Step 1 -> Powerlessness"),
                                 ]),
                             Wizard\Step::make('Personal Recovery')
                                 ->icon('heroicon-m-finger-print')
