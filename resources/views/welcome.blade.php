@@ -1,8 +1,9 @@
 <x-layouts.app>
     <section class="grid grid-cols-1 gap-4 justify-items-center p-16">
         @auth
+        
         <h2 class="mb-4 text-2xl font-bold text-gray-800 md:mb-8 lg:text-3xl">
-            {{ Auth::user()->name }}
+            👉 {{ Auth::user()->name }}
         </h2>
         @endauth
         <a href="/add-meeting" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 w-full">
