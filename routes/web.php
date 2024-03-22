@@ -20,3 +20,5 @@ Route::get('/', function () {
 
 //Route::get('add-meeting', view('meetings.add-meeting'))->middleware('auth');
 Route::view('add-meeting', 'meetings.add-meeting')->middleware('auth');
+
+Route::get('notification', [\App\Http\Controllers\DiscordNotification::class, 'notification']);
