@@ -1,11 +1,31 @@
 {
+  "public/assets/animations/Highlight3.svg": {
+    "file": "assets/Highlight3-8bcd04c6.svg",
+    "src": "public/assets/animations/Highlight3.svg"
+  },
+  "public/assets/animations/Underline1.svg": {
+    "file": "assets/Underline1-51487730.svg",
+    "src": "public/assets/animations/Underline1.svg"
+  },
+  "public/assets/animations/Underline2.svg": {
+    "file": "assets/Underline2-b37ede43.svg",
+    "src": "public/assets/animations/Underline2.svg"
+  },
+  "public/assets/animations/Underline3.svg": {
+    "file": "assets/Underline3-9644d25b.svg",
+    "src": "public/assets/animations/Underline3.svg"
+  },
+  "public/assets/animations/Underline4.svg": {
+    "file": "assets/Underline4-59cab6f5.svg",
+    "src": "public/assets/animations/Underline4.svg"
+  },
   "resources/css/app.css": {
-    "file": "assets/app-e1d765c3.css",
+    "file": "assets/app-31d4bd20.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
   "resources/js/app.js": {
-    "file": "assets/app-6bb05423.js",
+    "file": "assets/app-1076f4c1.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }
