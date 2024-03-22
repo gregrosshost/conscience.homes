@@ -1,8 +1,8 @@
 <!-- Content container -->
-<div class="container mx-auto font-rubik">
+<div class="container mx-auto font-rubik bg-gray-100 xl:px-32 lg:px-24 md:px-16 px-4 py-16  shadow-lg">
   <!-- Hero section -->
   <section
-    class="flex flex-col justify-center text-center md:text-left md:flex-row md:justify-between md:items-center lg:px-48 md:px-12 px-4 py-16 bg-gray-100 shadow-lg">
+    class="flex flex-col justify-center text-center md:text-left md:flex-row md:justify-between md:items-center">
     <!-- Branding Statement -->
     <article class="md:flex-1 md:mr-12">
       <h2 class="text-5xl font-bold mb-7">

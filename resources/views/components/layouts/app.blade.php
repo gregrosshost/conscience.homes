@@ -26,37 +26,62 @@
 <div class="min-h-screen bg-gray-100 mx-auto">
   @guest
     <!-- Content container -->
-    <div class="container mx-auto font-rubik">
-    <header class="bg-gray-200 py-6 lg:px-48 md:px-12 px-4">
-      <nav class="flex items-center justify-between">
-        <!-- Logo on the left -->
-        <a href="/" class="flex items-center space-x-4">
-          <img src="/assets/logos/Logo.svg" alt="Logo" class="h-8">
-          <h1 class="text-xl lg:text-2xl font-bold text-gray-800 font-logo">Conscience Homes</h1>
-        </a>
-        <!-- Menu in the middle -->
-        <ul class="hidden md:flex items-center space-x-6 text-lg">
-          <li><a href="#about" class="text-gray-700 hover:text-gray-900 font-medium">About</a></li>
-          <li><a href="#contact" class="text-gray-700 hover:text-gray-900 font-medium">Contact Us</a></li>
-        </ul>
-        <!-- Action button on the right -->
-        <div class="md:flex space-x-2">
-          <a href="/admin/login" class="block w-max">
-            <button class="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 font-semibold font-button">Admin Login</button>
+    <div class="container mx-auto font-rubik bg-gray-200 xl:px-32 lg:px-24 md:px-16 px-4 py-6  shadow-lg">
+      <header>
+        <nav class="flex items-center justify-between">
+          <!-- Logo on the left -->
+          <a href="/" class="flex items-center space-x-4">
+            <img src="/assets/logos/Logo.svg" alt="Logo" class="h-8">
+            <h1 class="text-2xl lg:text-3xl font-bold text-gray-800 font-logo">Conscience Homes</h1>
           </a>
-          <a href="/member/login" class="block w-max">
-            <button class="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 font-semibold font-button">Member Login</button>
-          </a>
-        </div>
-        <div id="showMenu" class="md:hidden">
-          <img src='/assets/animations/Menu.svg' alt="Menu icon" />
-        </div>
-      </nav>
-    </header>
+          <!-- Menu in the middle -->
+          <ul class="hidden lg:flex items-center space-x-6 text-lg">
+            <li><a href="#about" class="text-gray-700 hover:text-gray-900 font-medium">About</a></li>
+            <li><a href="#contact" class="text-gray-700 hover:text-gray-900 font-medium">Contact Us</a></li>
+          </ul>
+          <!-- Action buttons on the right -->
+          <div class="lg:flex space-x-2 hidden">
+            <a href="/admin/login" class="block w-max">
+              <button class="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 font-semibold font-button">
+                Admin Login
+              </button>
+            </a>
+            <a href="/member/login" class="block w-max">
+              <button class="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 font-semibold font-button">
+                Member Login
+              </button>
+            </a>
+          </div>
+          <div id="showMenu" class="lg:hidden">
+            <img src='/assets/animations/Menu.svg' alt="Menu icon"/>
+          </div>
+        </nav>
+
+        {{--MOBILE--}}
+        <nav id='mobileNav' class="hidden px-4 py-6 fixed top-0 left-0 h-full w-full bg-gray-300 z-20 animate-fade-in-down">
+          <div id="hideMenu" class="flex justify-end">
+            <img src='assets/animations/Cross.svg' alt="" class="h-16 w-16" />
+          </div>
+          <ul class="flex flex-col mx-8 my-24 items-center text-3xl">
+            <li class="my-6">
+              <a href="#about">About</a>
+            </li>
+            <li class="my-6">
+              <a href="#contact">Contact</a>
+            </li>
+            <li class="my-6 bg-gray-500 text-white rounded-lg hover:bg-gray-600 font-semibold font-button p-4">
+              <a href="/admin/login">Admin Login</a>
+            </li>
+            <li class="my-6 bg-gray-500 text-white rounded-lg hover:bg-gray-600 font-semibold font-button p-4">
+              <a href="/member/login">Member Login</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
     </div>
     <!-- Content container -->
     <div class="container mx-auto">
-    {{ $slot }}
+      {{ $slot }}
     </div>
   @endguest
 

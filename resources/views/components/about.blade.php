@@ -1,7 +1,7 @@
 <!-- Content container -->
-<div class="container mx-auto font-rubik">
+<div class="container mx-auto font-rubik bg-gray-50 xl:px-32 lg:px-24 md:px-16 px-4 py-16  shadow-lg">
   <!-- About section -->
-  <section id="about" class="flex flex-col justify-center text-left lg:px-48 md:px-12 px-4 py-16 bg-gray-50 shadow-lg">
+  <section id="about" class="flex flex-col justify-center text-left max-w-2xl ">
     <header class="mb-8">
       <h2 class="text-3xl font-bold mb-8">About Us</h2>
       <p class="text-lg text-gray-700 mb-8 font-medium">
@@ -31,7 +31,7 @@
       </p>
       <h3 class="text-xl font-semibold mt-8 mb-4">Our Values</h3>
       <ul class="text-lg text-gray-700 mb-4 font-medium list-disc list-inside">
-        <li class="py-2"><strong>Transparency:</strong> means operating with openness and honesty, ensuring nothing is hidden from our residents or stakeholders, fostering trust and empowerment in our community, and welcoming feedback to build and maintain trust.</li>
+        <li class="py-2"><strong>Transparency:</strong> means operating with openness and honesty, ensuring nothing is hidden from our members, fostering trust and empowerment in our community, and welcoming feedback to build and maintain trust.</li>
         <li class="py-2"><strong>Responsibility:</strong> entails acknowledging the impact of our actions, committing to integrity and diligence, and delivering on promises while learning from our experiences.</li>
         <li class="py-2"><strong>Accountability:</strong> involves holding ourselves answerable for our decisions and commitments, ensuring that we deliver on promises and learn from our experiences, fostering trust and confidence in our organization.</li>
         <li class="py-2"><strong>Goodwill:</strong> is the cornerstone of our interactions, embracing kindness and compassion, nurturing a supportive and empathetic environment where everyone feels valued and respected, fostering a sense of belonging and well-being among our community members.</li>
